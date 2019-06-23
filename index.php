@@ -2,7 +2,8 @@
 require_once ".config.php"
 switch($_GET["method"]) {
 case "getInfo":
-echo("$infoRequest");
+$json_infoRequest = json_encode("$infoRequest");
+echo("$json_infoRequest");
 break;
 case "":
 echo("Method required");
