@@ -1,7 +1,7 @@
 <?php
-require_once(".config.php");
-switch("$_GET['method']") {
-case "1":
+include ".config.php";
+switch ($_GET['method']) {
+case "base":
 $operationFinish = TRUE;
 $responce = array("success" => "$operationFinish", "message" => "FlexMusic is completed or what?");
 $responce = base64_encode("$responce");
@@ -13,4 +13,7 @@ $responce = base64_encode("$responce");
 echo("$responce");
 break;
 }
+fopen("log.txt", "a");
+fwrite("log.txt", $_GET);
+fclose("log.txt");
 ?>
