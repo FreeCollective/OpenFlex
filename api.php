@@ -1,16 +1,20 @@
 <?php
 include ".config.php";
-switch ($_GET['method']) {
-case "base":
-$operationFinish = TRUE;
-$responce = array("success" => "$operationFinish", "message" => "FlexMusic is completed or what?");
-$responce = base64_encode("$responce");
+function responce($responce) {
+$responce = json_encode($responce);
+$responce = base64_encode($responce);
 echo("$responce");
+}
+$undecoded = urldecode($_GET['action']);
+$undecoded = base64_decode($undecoded);
+switch ($undecoded) {
+case "GenerateAd":
+$responce = array("success" => true, "message" => "Done.", "generated" => $flexad);
+responce($responce);
 break;
 case "":
-$responce = array("success" => "$operationFinish", "message" => "Unknown action.");
-$responce = base64_encode("$responce");
-echo("$responce");
+$responce = array("success" => false, "message" => "Unknown action.");
+responce($responce);
 break;
 }
 fopen("log.txt", "a");
