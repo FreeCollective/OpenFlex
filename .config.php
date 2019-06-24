@@ -1,7 +1,7 @@
 <?php
 //change serverurl value
 $serverurl = "http://example.com";
-$donate_url = "https://qiwi.com/flexmusic";
+$donate_url = "https://qiwi.me/openflex";
 $ads_url = "$serverulr"."/api.php";
 $token = "asdf23ixyktk5l2f3s4g5dsa678a7ig89n8dh3hh540"; //get token with audio right
 
