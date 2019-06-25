@@ -2,7 +2,7 @@
 OpenSource implementation of server-side FlexMusic part for SovaLite
 
 ## How to use
-1. Setup PHP and webserber
+1. Setup PHP and webserver
 2. Clone this repo to `/var/www/html/` or another path, specified in webserver config
 3. Configure `.config.php` for work
 	- Token
