@@ -25,12 +25,8 @@ OpenSource implementation of server-side FlexMusic part for SovaLite
 - [ ] MP3 Proxy __(DEPRECATED)__
 > - [X] loadTrack __(stub)__
 - [ ] Security
-> - [ ] Encryption
->> - [X] Base64
->> - [ ] RSA
->> - [ ] AES
->> - [ ] Blowfish
->> - [ ] Another symmetric encryption
+> - [X] Base64
+> - [ ] UID restictions __(extension)__
 - [ ] Server Extensions
 > - [ ] Base  config
 > - [ ] User-Agent access limitation
