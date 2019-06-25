@@ -32,3 +32,5 @@ OpenSource implementation of server-side FlexMusic part for SovaLite
 >> - [ ] Another symmetric encryption
 > - [ ] Security extensions
 >> - [ ] Paid server
+- [ ] Server Extensions
+> - [ ] Random ad
