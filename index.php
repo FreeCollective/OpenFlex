@@ -45,7 +45,7 @@ $response = array("error" => "Deprecated.");
 } else {
 $response = iTaysonBlya();
 }
-response($response, true);
+response($response, false);
 break;
 case "":
 echo("Method required");

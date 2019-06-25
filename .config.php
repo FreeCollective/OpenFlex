@@ -1,7 +1,7 @@
 <?php
-function response($response, $base) {
+function response($response, $base = TRUE) {
 $response = json_encode($response);
-if(!$base) { //if $base == false, $response will be encoded by base64_encode
+if(!$base) { //if $base == true, $response will be encoded by base64_encode
 $response = base64_encode($response);
 }
 echo("$response");
