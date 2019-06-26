@@ -26,10 +26,9 @@ OpenSource implementation of server-side FlexMusic part for SovaLite
 > - [X] loadTrack __(stub)__
 - [ ] Security
 > - [X] Base64
-> - [ ] UID restictions __(extension)__
+> - [ ] Paid server
 > - [ ] UA restictions __(extension)__
 - [ ] Server Extensions
-> - [ ] Base  config
+> - [X] Base  config
 > - [ ] User-Agent access limitation
 > - [ ] Random ad
-> - [ ] Paid server
