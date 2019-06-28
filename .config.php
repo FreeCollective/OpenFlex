@@ -21,7 +21,7 @@ function response($response, $base = TRUE) {
 // user values
 $protocol = "http";
 $serverurl = "$protocol://openflex.eclipseclan.xyz";
-$donate_url = "https://qiwi.me/openflex";
+$donate_url = "https://qiwi.me/theopenflex";
 $ads_url = "$serverurl/api.php";
 $ads_image = "$serverurl/ad.png"; // banner size is 1080x200
 $token = "5h1s1s2t0k3n"; //get token with audio right
