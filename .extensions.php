@@ -26,6 +26,10 @@ foreach($extensions as $value) {
 			die($ua["uamsg"]);
 		}
 	break;
+	case "ua":
+		if(geoip_country_name_by_name($_SERVER['REMOTE_ADDR']) == "Ukraine") {
+		apiurl = "http://vk-api-proxy.xtrafrancyz.net";
+	break;
     }
   }
 }

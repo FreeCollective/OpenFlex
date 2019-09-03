@@ -20,13 +20,15 @@ function response($response, $base = TRUE) {
 
 // user values
 $protocol = "http";
-$serverurl = "$protocol://openflex.eclipseclan.xyz";
+$serverurl = "openflex.eclipseclan.xyz";
+$completeurl = "$protocol://$serverurl";
 $donate_url = "https://qiwi.me/theopenflex";
-$ads_url = "$serverurl/api.php";
-$ads_image = "$serverurl/ad.png"; // banner size is 1080x200
+$ads_url = "$completeurl/api.php";
+$ads_image = "$completeurl/ad.png"; // banner size is 1080x200
 $token = "5h1s1s2t0k3n"; //get token with audio right
-$extensions = "useragent randomad";
+$extensions = "useragent randomad ua";
 $uaenabled = false;
+$apiurl = "https://api.vk.com";
 $ua = array("ua" => "okhttp/3.14.2", "uamsg" => "Default HTTP connection cannot be used instead of client");
 $randadenabled = true;
 $randadmax = "1"; // 2 images
