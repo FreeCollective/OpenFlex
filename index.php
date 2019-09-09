@@ -10,19 +10,19 @@
 *
 ***/
 include ".config.php";
-function curl($url) { 
-    $ch = curl_init($url); 
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); 
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-  	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+function curl($url) {
+	ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Connection: keep-alive',
         'User-Agent: VKAndroidApp/5.32-3620 (Android 8.1.0; SDK 27; armeabi-v7a; Nexus 5; ru; 1920x1080)'
 ));
-  $response = curl_exec($ch); 
-  curl_close($ch); 
-  return $response; 
+  $response = curl_exec($ch);
+  curl_close($ch);
+  return $response;
   }
 function iTaysonBlya() {
 $response = array("error" => "Invalid link (".$_GET['track'].")");
@@ -34,9 +34,8 @@ switch ($_GET["method"]) {
 		echo("$responce");
 		break;
 	case "getAudio":
-/* Maybe this doesn't work correctly
-		if(isset($_GET['audios'])) {
-Maybe $_GET variables on isset will always send TRUE*/
+/**		if(isset($_GET['audios'])) {
+Disabled, because $_GET variables on isset will always send TRUE **/
 		if($_GET['audios'] != "") {
 			$request = curl("https://api.vk.com/method/audio.getById?access_token=$token&audios=".$_GET['audios']."&v=5.92");
 			$request = json_decode("$request", true);

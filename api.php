@@ -17,7 +17,7 @@ switch ($undecoded) {
     $response = array("success" => true, "message" => "Done.", "generated" => $flexad);
     response($response);
     break;
-case "":
+default:
     $response = array("success" => false, "message" => "Unknown action.");
     response($response);
     break;
