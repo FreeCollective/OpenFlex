@@ -10,7 +10,11 @@
 *
 ***/
 include ".config.php";
-$undecoded = urldecode($_GET['action']);
+if(isset($_GET) && isset($_GET['action'])){
+    $undecoded = urldecode($_GET['action']);
+}else{
+    $undecoded = "";
+}
 $undecoded = base64_decode($undecoded);
 switch ($undecoded) {
     case "GenerateAd":
@@ -22,4 +26,3 @@ default:
     response($response);
     break;
 }
-?>

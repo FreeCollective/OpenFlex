@@ -39,4 +39,3 @@ include(".extensions.php");
 // an main server-side vars
 $flexad = array('image_link' => "$ads_image",'target_url' => "$donate_url");
 $infoRequest = array("donate_url" => "$donate_url", "ads_url" => "$ads_url");
-?>
