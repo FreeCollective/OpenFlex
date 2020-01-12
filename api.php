@@ -9,7 +9,7 @@
 *	prohibited without written permission from FreeCollective.
 *
 ***/
-include ".config.php";
+include(".config.php");
 if(isset($_GET) && isset($_GET['action'])){
     $undecoded = urldecode($_GET['action']);
 }else{

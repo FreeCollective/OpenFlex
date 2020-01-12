@@ -17,7 +17,7 @@ if (isset($extensions)) {
 			case "randomad":
 				//only for php7
 				if ($randadenabled) {
-					$randad = mt_rand(0, $randadmax); // if you change to rand(), int values will not be completely random
+					$randad = mt_rand(0, $randadmax); 
 					$ads_image = "$serverurl/ad$randad.png";
 				}
 				break;

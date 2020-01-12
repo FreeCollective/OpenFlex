@@ -10,7 +10,7 @@
  *	prohibited without written permission from FreeCollective.
  *
  ***/
-include ".config.php";
+include(".config.php");
 function curl($url)
 {
 	$ch = curl_init($url);
@@ -31,6 +31,7 @@ function iTaysonBlya()
 	$response = array("error" => "Invalid link (" . $_GET['track'] . ")");
 	return $response;
 }
+
 if (!(isset($_GET) && isset($_GET["method"]))) {
 	$_GET["method"] = "";
 }
@@ -40,10 +41,8 @@ switch ($_GET["method"]) {
 		echo ("$responce");
 		break;
 	case "getAudio":
-		//if(isset($_GET['audios'])) {
-		//  Disabled, because $_GET variables on isset will always send TRUE
 		if($_GET['audios'] != "") {
-			$request = curl("https://api.vk.com/method/audio.getById?access_token=$token&audios=" . $_GET['audios'] . "&v=5.92");
+			$request = curl("$apiurl/method/audio.getById?access_token=$token&audios=" . $_GET['audios'] . "&v=5.98");
 			$request = json_decode("$request", true);
 			$response = array("response" => $request["response"], "flexad" => $flexad);
 		} else {
@@ -54,8 +53,6 @@ switch ($_GET["method"]) {
 	case "loadTrack": // Deprecated
 		if ($_GET['track'] != "") {
 			$response = array("error" => "Deprecated.");
-			//} elseif(strpos($request, "404")) {
-			//$response = iTaysonBlya();
 		} else {
 			$response = iTaysonBlya();
 		}
