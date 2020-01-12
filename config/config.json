@@ -1,0 +1,26 @@
+{
+    "protocol": "http",
+    "serverurl": "openflex.eclipseclan.xyz",
+    "completeurl": "protocol",
+    "donate_url": "https://qiwi.me/theopenflex",
+    "ads_url": "completeurl/api.php",
+    "ads_image": "completeurl/ad.png",
+    "token": "5h1s1s2t0k3n",
+    "extensions": "useragent randomad ua",
+    "uaenabled": false,
+    "apiurl": "api.vk.com",
+    "ua": {
+        "ua": "okhttp/3.14.2",
+        "uamsg": "Default HTTP connection cannot be used instead of client"
+    },
+    "randadenabled": true,
+    "randadmax": "1",
+    "flexad": {
+        "image_link": "completeurl/ad.png",
+        "target_url": "https://qiwi.me/theopenflex"
+    },
+    "infoRequest": {
+        "donate_url": "https://qiwi.me/theopenflex",
+        "ads_url": "completeurl/api.php"
+    }
+}
